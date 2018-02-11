@@ -18,3 +18,6 @@ python triangle.py [-h] [--blur_rad BLUR_RAD] [--threshold THRESHOLD]
 
 <a href="https://github.com/avikj/triangle/blob/master/examples/space.jpg"><img src="https://github.com/avikj/triangle/blob/master/examples/space.jpg" width=420/></a>
 <a href="https://github.com/avikj/triangle/blob/master/examples/space-triangles.png"><img src="https://github.com/avikj/triangle/blob/master/examples/space-triangles.png" width=420/></a>
+
+<a href="https://github.com/avikj/triangle/blob/master/examples/birds2.jpg"><img src="https://github.com/avikj/triangle/blob/master/examples/birds2.jpg" width=420/></a>
+<a href="https://github.com/avikj/triangle/blob/master/examples/birds2-triangles.png"><img src="https://github.com/avikj/triangle/blob/master/examples/birds2-triangles.png" width=420/></a>
