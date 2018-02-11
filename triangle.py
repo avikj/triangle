@@ -7,12 +7,15 @@ import argparse
 
 def render(args):
   im = np.asarray(Image.open(args.input_file).convert('LA').filter(ImageFilter.GaussianBlur(args.blur_rad)))[:,:,0]
+  if args.verbose:
+    print 'Using edge detection to select points...'
   surface = gizeh.Surface(width=int(im.shape[1]*args.scale), height=int(im.shape[0]*args.scale))
 
   # Get vertex points 
   points = zip(*np.where(sobel(im) > args.threshold))
-  Image.fromarray((sobel(im)).astype(np.float32)*255/np.max(sobel(im))).show()
-  Image.fromarray((sobel(im)>args.threshold).astype(np.float32)*255).show()
+  if args.verbose:
+    Image.fromarray((sobel(im)).astype(np.float32)*255/np.max(sobel(im))).show()
+    Image.fromarray((sobel(im)>args.threshold).astype(np.float32)*255).show()
   if(len(points) > args.max_points-4):
     np.random.shuffle(points)
     points = points[:args.max_points-4]
@@ -20,11 +23,13 @@ def render(args):
   points.append((im.shape[0]-1,0))
   points.append((im.shape[0]-1,im.shape[1]-1))
   points.append((0,im.shape[1]-1))
-
+  if args.verbose:
+    print 'Running Delaunay triangulation...'
   # Run Delaunay triangulation to get simplices
   simplices = Delaunay(points).simplices
 
-
+  if args.verbose:
+    print 'Rendering...'
   source = np.asarray(Image.open(args.input_file).convert('RGB'))
   copy = np.copy(source)
   for simplex in simplices:
@@ -64,6 +69,8 @@ parser.add_argument('--max_points', type=int,
                    help='Max number of points to select for Delaunay triangulation.', default=1000)
 parser.add_argument('--scale', type=float,
                    help='Size scale factor for output.', default=1)
+parser.add_argument('--verbose', action='store_true',
+                   help='Show intermediate output, data.')
 
 args = parser.parse_args()
 render(args)
