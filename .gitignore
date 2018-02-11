@@ -1,6 +1,12 @@
+
 *.gif
 *.png
 *.jp*g
+
+!examples/seagull.jpg
+!examples/goat.jpg
+!examples/seagull-triangles.png
+!examples/goat-triangles.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
