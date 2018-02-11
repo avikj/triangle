@@ -12,5 +12,9 @@ python triangle.py [-h] [--blur_rad BLUR_RAD] [--threshold THRESHOLD]
 ## Sample Input/Output
 <a href="https://github.com/avikj/triangle/blob/master/examples/seagull.jpg"><img src="https://github.com/avikj/triangle/blob/master/examples/seagull.jpg" width=420/></a>
 <a href="https://github.com/avikj/triangle/blob/master/examples/seagull-triangles.png"><img src="https://github.com/avikj/triangle/blob/master/examples/seagull-triangles.png" width=420/></a>
+
 <a href="https://github.com/avikj/triangle/blob/master/examples/goat.jpg"><img src="https://github.com/avikj/triangle/blob/master/examples/goat.jpg" width=420/></a>
 <a href="https://github.com/avikj/triangle/blob/master/examples/goat-triangles.png"><img src="https://github.com/avikj/triangle/blob/master/examples/goat-triangles.png" width=420/></a>
+
+<a href="https://github.com/avikj/triangle/blob/master/examples/space.jpg"><img src="https://github.com/avikj/triangle/blob/master/examples/space.jpg" width=420/></a>
+<a href="https://github.com/avikj/triangle/blob/master/examples/space-triangles.png"><img src="https://github.com/avikj/triangle/blob/master/examples/space-triangles.png" width=420/></a>

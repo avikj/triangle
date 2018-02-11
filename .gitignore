@@ -3,8 +3,10 @@
 *.png
 *.jp*g
 
+!examples/space.jpg
 !examples/seagull.jpg
 !examples/goat.jpg
+!examples/space-triangles.png
 !examples/seagull-triangles.png
 !examples/goat-triangles.png
 
