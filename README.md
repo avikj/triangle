@@ -1,2 +1,3 @@
 # triangle
-Delaunay triangulation for digital art.
+Python implementation of @esimov's [triangle](https://github.com/esimov/triangle).
+
