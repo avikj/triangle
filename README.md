@@ -4,7 +4,7 @@ Python implementation of @esimov's [triangle](https://github.com/esimov/triangle
 ## Usage
 
 ```
-triangle.py [-h] [--blur_rad BLUR_RAD] [--threshold THRESHOLD]
+python triangle.py [-h] [--blur_rad BLUR_RAD] [--threshold THRESHOLD]
                    [--max_points MAX_POINTS] [--scale SCALE] [--verbose]
                    input_file output_file
 ```
