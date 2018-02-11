@@ -2,12 +2,17 @@ from PIL import Image, ImageFilter
 import numpy as np
 from skimage.filters import scharr, sobel
 from scipy.spatial import Delaunay
-factor=10
+threshold = .1
+MAX_POINTS = 1000
 def render(input_file='hari.jpeg'):
   im = np.asarray(Image.open(input_file).convert('LA'))[:,:,0]
   print im
-  points = zip(*np.where(sobel(im) > factor*np.random.rand(im.shape[0], im.shape[1])))
-  print len(points)
+  bools = (sobel(im) > threshold)
+  points = zip(*np.where(bools))
+  Image.fromarray(bools.astype(np.float32)*255).show()
+  if(len(points) > MAX_POINTS-4):
+    np.random.shuffle(points)
+    points = points[:MAX_POINTS-4]
   points.append((0,0))
   points.append((im.shape[0]-1,0))
   points.append((im.shape[0]-1,im.shape[1]-1))
